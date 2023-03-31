@@ -31,3 +31,4 @@ Optional
      * Add actuator control plugins
  * Add a <gazebo> element for the <robot> element
  * Add a <link name="world"/> link if the robot should be rigidly attached to the world/base_link
+    * Add a joint between the base link of the robot and the world link
