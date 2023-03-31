@@ -8,6 +8,9 @@ Launches the gazebo simulation of the locobot in the two room environment
 ### locobot_teleop.launch
 Launches teleop control of the locobot similar to turtlebot's teleop.
 
+###  env_spawn.launch
+Spawns environment in a gazebo world (gazebo world must already be running)
+
 ## URDF
 To make a URDF compatable with ROS, follow the following tutorial: 
 http://classic.gazebosim.org/tutorials?tut=ros_urdf&cat=connect_ros
