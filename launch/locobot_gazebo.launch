@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <include file="$(find interbotix_xslocobot_moveit_interface)/launch/xslocobot_moveit_interface.launch">
+        <arg name="robot_model" value="locobot_wx200"/>
+        <arg name="show_lidar"  value="true"/>
+        <arg name="use_gazebo"  value="true"/>
+        <arg name="dof"         value="5"/>
+    </include>
+
+    <include file="$(find locobot_custom)/launch/env_spawn.launch" />
+          
+</launch>
