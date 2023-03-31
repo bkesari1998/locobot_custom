@@ -19,12 +19,12 @@ Required
 
 Optional
 
-    * Add a <gazebo> element for every <link>
-        * Convert visual colors to Gazebo format
-        * Convert stl files to dae files for better textures
-        * Add sensor plugins
-    * Add a <gazebo> element for every <joint>
-        * Set proper damping dynamics
-        * Add actuator control plugins
-    * Add a <gazebo> element for the <robot> element
-    * Add a <link name="world"/> link if the robot should be rigidly attached to the world/base_link
+ * Add a <gazebo> element for every <link>
+     * Convert visual colors to Gazebo format
+     * Convert stl files to dae files for better textures
+     * Add sensor plugins
+ * Add a <gazebo> element for every <joint>
+     * Set proper damping dynamics
+     * Add actuator control plugins
+ * Add a <gazebo> element for the <robot> element
+ * Add a <link name="world"/> link if the robot should be rigidly attached to the world/base_link
