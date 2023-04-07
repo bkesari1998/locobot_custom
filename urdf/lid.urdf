@@ -1,0 +1,32 @@
+<robot name="lid">
+  <link name="lid">
+
+    <inertial>
+      <mass value="0.5" />
+      <origin xyz="0 0 0" /> 
+      <inertia  ixx="0.01126666666" ixy="0.0"  ixz="0.0"  iyy="0.01126666666"  iyz="0.0"  izz="0.0225" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.02"/>
+      </geometry>
+    </visual>
+    
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <gazebo reference="lid">
+    <mu1>10</mu1>
+    <mu2>10</mu2>
+    <material>Gazebo/Pink</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+</robot>
