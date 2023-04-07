@@ -1,85 +1,41 @@
 <?xml version="1.0"?>
 <robot name="trash_can">
-  <link name="base_link">
-     <visual>
-      <origin xyz="0 0 -0.0745" rpy="0 0 0" />
-      <geometry>
-        <box size="0.07 0.07 0.001" />
-      </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 0.4" />
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="0 0.0345 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.07 0.001 0.15" />
-      </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 0.4" />
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="0 -0.0345 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.07 0.001 0.15" />
-      </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 0.4" />
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="0.0345 0 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.001 0.07 0.15" />
-      </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 0.4" />
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.0345 0 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.001 0.07 0.15" />
-      </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 0.4" />
-      </material>
-    </visual>
 
-    <collision>
-      <origin xyz="0 0 -0.0745" rpy="0 0 0" />
+  <link name="trash_can">
+    <inertial>
+      <mass value="0.4193"/>
+      <origin xyz="0 0 0"/>
+      <inertia
+        ixx="0.00212027306"
+        ixy="0"
+        ixz="0"
+        iyy="0.00212027306"
+        iyz="0"
+        izz="0.00023013446"
+      />
+    </inertial>
+
+    <visual>
       <geometry>
-        <box size="0.07 0.07 0.001" />
+        <mesh filename="/home/kchura01/catkin_ws/src/locobot_custom/urdf/meshes/trash_can.dae"
+         scale="7 7 7"/>
       </geometry>
-    </collision>
+      <origin xyz="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    
     <collision>
-      <origin xyz="0 0.0345 0" rpy="0 0 0" />
       <geometry>
-        <box size="0.07 0.001 0.15" />
+        <mesh filename="/home/kchura01/catkin_ws/src/locobot_custom/urdf/meshes/trash_can.dae"
+         scale="7 7 7"/>
       </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0 -0.0345 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.07 0.001 0.15" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0345 0 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.001 0.07 0.15" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.0345 0 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.001 0.07 0.15" />
-      </geometry>
+      <origin xyz="0 0 0"/>
     </collision>
   </link>
 
-  <gazebo reference="base_link">
-    <material>Gazebo/Blue</material>
+  <gazebo reference="trash_can">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
+
 </robot>
