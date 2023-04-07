@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+    <env name="GAZEBO_MODEL_PATH" value="$(find locobot_custom)"/>
+
     <param name="robot_description" command="cat '$(find locobot_custom)/urdf/trash_can.urdf'" />
     
-    <node name="env_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+    <node name="trash_can_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
           args="-urdf -param robot_description -model trash_can" />
           
 </launch>
